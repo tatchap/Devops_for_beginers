@@ -280,6 +280,46 @@ On host01 we want to resolve name news to news.yahoo.com automatically without h
 echo "address=/news/98.137.11.163" | sudo tee /etc/dnsmasq.d/news-alias.conf
 ```
 
+# Java introduction 
+
+Which java version is installed on host01 server?
+```
+java --version
+```
+Which tool is used for documenting your app with JDK?
+```
+javadoc
+```
+Which tool is used for compiling your app with JDK?
+```
+javac
+```
+Which tool is used for debugging your app with JDK?
+```
+jdb
+```
+Which component was not part of JDK before version 9 of Java but became part of it from version 9 onwards?
+```
+jre
+```
+Help us install Java 20 inside the /opt directory on the app01 server. Use the bob user and the password caleston123 to log in to the app01 server.
+```
+ssh bob@app01
+```
+  Download Java 20 (JDK) tarball: 
+```cd /tmp
+curl -L -O https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.2%2B9/OpenJDK20U-jdk_x64_linux_hotspot_20.0.2_9.tar.gz
+```
+  Extract it into /opt: 
+```
+
+```
+
+```
+
+```
+
+
 
 
 
