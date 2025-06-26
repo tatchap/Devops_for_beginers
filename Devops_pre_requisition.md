@@ -312,12 +312,10 @@ curl -L -O https://github.com/adoptium/temurin20-binaries/releases/download/jdk-
 ```
   Extract it into /opt: 
 ```
-
+sudo mkdir -p /opt/java
+sudo tar -xzf OpenJDK20U-jdk_x64_linux_hotspot_20.0.2_9.tar.gz -C /opt/java
 ```
 
-```
-
-```
 
 
 
