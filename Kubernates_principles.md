@@ -345,91 +345,159 @@ then:
 ```
 kubectl apply -f /root/service-definition-1.yaml
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Kubernetes YAML
+
+Which of the following is used to separate the key and value in YAML?
+```
+colon
+```
+How many array keys are there in the following yaml snippet?
+Fruits:
+  - Orange
+  - Apple
+  - Banana
+Vegetables:
+  - Carrot
+  - CauliFlower
+  - Tomato
+
+```
+2 ie Fruits and Vegetables
+```
+There is a yaml file named practice.yaml under /home/bob/playbooks/ directory with a key property1 and value value1.
+Add an additional key named property2 and value value2.
+```
+echo "property2: value2" >> /home/bob/playbooks/practice.yaml
+```
+We have updated the /home/bob/playbooks/practice.yaml file with the key name and value apple. Add some additional properties (given below) to the dictionary.
+name= apple
+color= red
+weight= 90g
+
+`
+nano /home/bob/playbooks/practice.yaml
+enter the given properties
+`
+We have updated the /home/bob/playbooks/practice.yaml file with a dictionary named employee. Add the remaining properties to it using information from the table below.
+
+Key/Property	Value
+name	john
+gender	male
+age	24
+
+`i will use shell commands`
+``` cat <<EOF > /home/bob/playbooks/practice.yaml
+employee:
+  name: john
+  gender: male
+  age: 24
+EOF
+```
+Now, update the /home/bob/playbooks/practice.yaml file with a dictionary in dictionary.
+Add a dictionary named address to add the address information in this file.
+
+Key/Property	Value
+city	edison
+state	new jersey
+country	united states
+
+```
+cat <<EOF > /home/bob/playbooks/practice.yaml
+employee:
+  name: john
+  gender: male
+  age: 24
+  address:
+    city: edison
+    state: new jersey
+    country: united states
+EOF
+```
+We have updated the /home/bob/playbooks/practice.yaml file with an array of apples. Add a new apple to the list to make it a total of 4
+```
+nano /home/bob/playbooks/practice.yaml
+```
+We have updated the /home/bob/playbooks/practice.yaml file with some data for apple, orange and mango. Just like apple, we would like to add additional details for each item, such as color, weight etc. Modify the remaining items to match the below data.
+
+orange
+
+color	weight
+orange	90g
+
+mango
+
+color	weight
+yellow	150g
+
+```
+cat <<EOF > /home/bob/playbooks/practice.yaml
+  - name: apple
+    color: red
+    weight: 100g
+  - name: orange
+    color: orange
+    weight: 90g
+  - name: mango
+    color: yellow
+    weight: 150g
+EOF
+```
+We have updated the /home/bob/playbooks/practice.yaml file with a dictionary named employee. We would like to record information about multiple employees. Convert the dictionary named employee to an array named employees.
+
+```
+cat <<EOF > /home/bob/playbooks/practice.yaml
+employees:
+  - name: john
+    gender: male
+    age: 24
+EOF
+```
+or 
+```
+nano /home/bob/playbooks/practice.yaml
+
+employees:
+  - name: john
+    gender: male
+    age: 24
+```
+Update the /home/bob/playbooks/practice.yaml file to add an additional employee (below the existing entry) to the list using the below information.
+
+Key/Property	Value
+name	sarah
+gender	female
+age	28
+```
+nano /home/bob/playbooks/practice.yaml
+
+Then edit manually
+```
+manually edition is less tricky than shell code.
+
+We have updated the /home/bob/playbooks/practice.yaml file to add some more details. Now add the employee payslip information by adding an array called payslips. Remember, while address is a dictionary, payslips is an array of month and amount.
+
+payslips
+
+month	amount
+june	1400
+july	2400
+august	3400
+
+```
+employee:
+  name: john
+  gender: male
+  age: 24
+  address:
+    city: 'edison'
+    state: 'new jersey'
+    country: 'united states'
+  payslips:
+      - month: june
+        amount: 1400
+      - month: july
+        amount: 2400
+      - month: august
+        amount: 3400
+```
 
